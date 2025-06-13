@@ -1,0 +1,248 @@
+/* Slide Template Styles */
+
+/* Base Slide Layout */
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Section */
+.slide-header {
+    padding: 30px 50px 20px 50px;
+    border-bottom: 3px solid #D9D9D9;
+    margin-bottom: 30px;
+}
+
+.slide-header h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+.slide-header .subtitle {
+    font-size: 24px;
+    color: #D9D9D9;
+    margin-top: 10px;
+}
+
+/* Content Section */
+.slide-content {
+    flex: 1;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Footer Section */
+.slide-footer {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #D9D9D9;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+/* Title Slide */
+.slide-title .slide-content {
+    text-align: center;
+    justify-content: center;
+}
+
+.slide-title h1 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.slide-title h2 {
+    font-size: 32px;
+    color: #D9D9D9;
+    font-weight: normal;
+}
+
+.slide-title .author {
+    font-size: 24px;
+    margin-top: 40px;
+    color: #4A4A4A;
+}
+
+/* Content Slide with Two Columns */
+.slide-two-columns .slide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table Slide */
+.slide-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.slide-table th {
+    background-color: #4A4A4A;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.slide-table td {
+    padding: 15px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.slide-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* List Styles */
+.slide ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.slide ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.slide ul li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #D9D9D9;
+    font-size: 14px;
+}
+
+/* Quote Slide */
+.slide-quote .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-quote blockquote {
+    font-size: 32px;
+    font-style: italic;
+    color: #4A4A4A;
+    position: relative;
+    padding: 0 60px;
+}
+
+.slide-quote blockquote:before,
+.slide-quote blockquote:after {
+    content: '"';
+    font-size: 80px;
+    color: #D9D9D9;
+    position: absolute;
+}
+
+.slide-quote blockquote:before {
+    top: -20px;
+    left: 0;
+}
+
+.slide-quote blockquote:after {
+    bottom: -60px;
+    right: 0;
+}
+
+.slide-quote .author {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #4A4A4A;
+}
+
+/* Image Slide */
+.slide-image .slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Numbered Points */
+.numbered-list {
+    counter-reset: item;
+}
+
+.numbered-list li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+}
+
+.numbered-list li:before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #D9D9D9;
+    color: #4A4A4A;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.highlight-box h3 {
+    color: #4A4A4A;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Transitions */
+.slide {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #D9D9D9;
+    transition: width 0.3s ease;
+}
