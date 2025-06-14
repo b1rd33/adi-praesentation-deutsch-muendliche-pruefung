@@ -1,0 +1,20 @@
+# Old/unused files
+artifacts/
+pdf-resources/
+slides/
+script-v3.js
+script.js
+slide-templates.css
+styles.css
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
